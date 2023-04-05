@@ -50,7 +50,7 @@ export default function Home() {
           </div>
     
           <section className='text-3xl font-bold text-center mb-10'>Projects
-            <div className=''>
+            <div>
               <h3 className='text-3xl font-bold py-4 text-center dark:text-white'></h3>
             </div>
             <div className='flex flex-col gap-10 py-0 lg:flex-row lg:flex-wrap'>
