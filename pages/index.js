@@ -29,7 +29,7 @@ export default function Home() {
       <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
         <section className='min-h-screen'>
           <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl font-burtons dark:text-white'>Career Portfolio</h1>
+            <h1 className='text-xl dark:text-white'>Career Portfolio</h1>
             <ul className='flex items-center'>
               <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl'/></li>
               <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-1 py-2 rounded-md ml-8' href="https://gist.githubusercontent.com/1godfrey/256fc13b15948be1d8355fc4fc4524b2/raw/442c6ed9b187e7c440a4ed63280f3cb871a19770/2023%2520resume%2520updated%2520(3).docx" alt="pic">Resume</a></li>
