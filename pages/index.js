@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             <div className='flex flex-col gap-10 py-0 lg:flex-row lg:flex-wrap'>
               <div className='basic-1/3 flex-1'>
-                <Image src={web1} alt="Web 1" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://m2moh1.csb.app/', '_blank')} />
+                <Image src={web1} alt="Web 1" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} />
               </div>
               <div className='basic-1/3 flex-1'>
                 <Image src={web2} alt="Web 2" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')} />
