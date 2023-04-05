@@ -60,18 +60,6 @@ export default function Home() {
               <div className='basic-1/3 flex-1'>
                 <Image src={web2} alt="Web 2" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')} />
               </div>
-              {/* <div className='basic-1/3 flex-1'>
-                <Image src={web3} className="rounded-lg object-cover" width={'100%'} height={'100%'} style="responsive" />
-              </div>
-              <div className='basic-1/3 flex-1'>
-                <Image  src={web4} className="rounded-lg object-cover" width={'100%'} height={'100%'} style="responsive" />
-              </div>
-              <div className='basic-1/3 flex-1'>
-                <Image src={web5} className="rounded-lg object-cover" width={'100%'} height={'100%'} style="responsive" />
-              </div>
-              <div className='basic-1/3 flex-1'>
-                <Image src={web6} className="rounded-lg object-cover" width={'100%'} height={'100%'} style="responsive" />
-              </div> */}
               
             </div>
           </section>
@@ -82,7 +70,7 @@ export default function Home() {
           </div>
           <div className='lg:flex justify-center gap-10 mb-20'>
   <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-    <Image className='mx-auto' src={design} width={100} height={100} />
+    <Image className='mx-auto' src={design} alt="design" width={100} height={100} />
     <h3 className='text-lg font-medium pt-8 pb-2'>Data Visualization</h3>
     <p className='py-2 text-s'>
       Interactive data visualizations/dashboards using D3.js and React. This can range from standard bar charts to fully interactive Geographical Maps.
@@ -95,7 +83,7 @@ export default function Home() {
   </div>
 
   <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-    <Image className='mx-auto' src={code} width={100} height={100} />
+    <Image className='mx-auto' src={code} alt="code" width={100} height={100} />
     <h3 className='text-lg font-medium pt-8 pb-2'>Web Development</h3>
     <p className='py-2'>
     Proficient in creating modern, attractive web applications using Next.js and Tailwind.css. This can range from simple calculator apps to fully fleshed out UI interfaces. 
