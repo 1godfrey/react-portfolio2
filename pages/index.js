@@ -46,7 +46,7 @@ export default function Home() {
              <AiOutlineGithub className='cursor-pointer' onClick={() => window.open('https://github.com/1godfrey', '_blank')} />
           </div>
           <div className='relative scale-75 bottom-12 mx-auto bg-gradient-to-b from-teal-500 rounded-full md:w-40 md:h-40 mt-0 mb-0 overflow-hidden lg:h-96 lg:w-96'>
-            <Image src={deved} className="absolute lg:right-20 lg:top-20 md:top-30 scale-150 "/>
+            <Image src={deved} alt="deved" className="absolute lg:right-20 lg:top-20 md:top-30 scale-150 "/>
           </div>
     
           <section className='text-3xl font-bold text-center mb-10'>Projects
@@ -55,10 +55,10 @@ export default function Home() {
             </div>
             <div className='flex flex-col gap-10 py-0 lg:flex-row lg:flex-wrap'>
               <div className='basic-1/3 flex-1'>
-                <Image src={web1} className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://m2moh1.csb.app/', '_blank')} />
+                <Image src={web1} alt="Web 1" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://m2moh1.csb.app/', '_blank')} />
               </div>
               <div className='basic-1/3 flex-1'>
-                <Image src={web2} className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')} />
+                <Image src={web2} alt="Web 2" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')} />
               </div>
               {/* <div className='basic-1/3 flex-1'>
                 <Image src={web3} className="rounded-lg object-cover" width={'100%'} height={'100%'} style="responsive" />
