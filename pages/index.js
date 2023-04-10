@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs'
 import {AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube, AiOutlineGithub} from 'react-icons/ai'
+import { BsCode, BsPlay } from 'react-icons/bs'
+import { HiOutlineDocumentText } from 'react-icons/hi'
+import { RiContactsBook2Line } from 'react-icons/ri'
+import { SiApplearcade } from 'react-icons/si'
 import Image from 'next/image'
 import deved from '../public/dev-ed-wave.png'
 import design from '../public/design.png'
@@ -12,10 +16,23 @@ import web3 from "../public/web3.png"
 import web4 from "../public/web4.png"
 import web5 from "../public/web5.png"
 import web6 from "../public/web6.png"
+import web7 from "../public/web7.jpg"
 import { useState } from 'react'
+
+
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
+  const [showImage, setShowImage] = useState(false);
+
+    const handleMoreInfoClick = () => {
+    setShowImage(true);
+  };
+
+  const handleModalClose = () => {
+    setShowImage(false);
+  };
   
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -26,49 +43,83 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className='bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
-        <section className='min-h-screen'>
-          <nav className='py-10 mb-12 flex justify-between'>
-            <h1 className='text-xl dark:text-white'>Career Portfolio</h1>
-            <ul className='flex items-center'>
-              <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl'/></li>
-              <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-1 py-2 rounded-md ml-8' href="https://gist.githubusercontent.com/1godfrey/256fc13b15948be1d8355fc4fc4524b2/raw/442c6ed9b187e7c440a4ed63280f3cb871a19770/2023%2520resume%2520updated%2520(3).docx" alt="pic">Resume</a></li>
-              <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-1 py-2 rounded-md ml-8' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" alt="pic">Contact</a></li>
-            </ul>
-          </nav>
-          <div className='text-center'>
-            <h2 className='text-5xl py-2 text-teal-600 font-medium md:text-6xl'>Hi, I'm Godfrey Mwalupindi</h2>
-            <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>Software Engineer/Developer</h3>
-            {/* <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto'>[Add a paragraph about yourself here if you want]</p> */}
-          </div>
-          <div className='text-5xl flex justify-center gap-10 py-3 text-gray-600'>
-             <AiFillLinkedin className='cursor-pointer' onClick={() => window.open('https://www.linkedin.com/in/godfrey-mwalupindi-9b2165244/', '_blank')} />
-             <AiOutlineGithub className='cursor-pointer' onClick={() => window.open('https://github.com/1godfrey', '_blank')} />
-          </div>
-          <div className='relative scale-75 bottom-12 mx-auto bg-gradient-to-b from-teal-500 rounded-full md:w-40 md:h-40 mt-0 mb-0 overflow-hidden lg:h-96 lg:w-96'>
-            <Image src={deved} alt="deved" className="absolute lg:right-20 lg:top-20 md:top-30 scale-150 "/>
-          </div>
+      <main className='px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
+  <div className="fixed top-0 left-0 h-screen w-screen z-[-1]">
+    <Image src={web7} className="h-full w-full object-cover opacity-10"/>
+  </div>
+  <section className='min-h-screen relative'>
+    <nav className='py-10 mb-12 flex justify-between'>
+      <h1 className='text-xl dark:text-white font-bold'>Portfolio</h1>
+      <ul className='flex items-center'>
+  <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl transition-transform duration-300 hover:scale-110'/></li>
+  <li><a className='bg-gradient-to-r from-black to-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/256fc13b15948be1d8355fc4fc4524b2/raw/442c6ed9b187e7c440a4ed63280f3cb871a19770/2023%2520resume%2520updated%2520(3).docx" target="_blank" rel="noopener noreferrer" alt="pic"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
+  <li><a className='bg-gradient-to-r from-black to-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank" rel="noopener noreferrer" alt="pic"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
+</ul>
+    </nav>
+    <div className='text-center'>
+      <h2 className='text-5xl py-2 text-blue-500 font-medium md:text-6xl'>Hi, I'm Godfrey Mwalupindi</h2>
+      <h3 className='text-2xl py-2 md:text-3xl font-bold dark:text-white'>Software Engineer</h3>
+      {/* <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto'>[Add a paragraph about yourself here if you want]</p> */}
+    </div>
+    <div className='text-5xl flex justify-center gap-10 py-3 text-gray-600'>
+       <AiFillLinkedin className='cursor-pointer transition-transform duration-300 hover:scale-125' onClick={() => window.open('https://www.linkedin.com/in/godfrey-mwalupindi-9b2165244/', '_blank')} />
+       <AiOutlineGithub className='cursor-pointer transition-transform duration-300 hover:scale-125' onClick={() => window.open('https://github.com/1godfrey', '_blank')} />
+    </div>
+    <div className='relative scale-50 bottom-0 mx-auto bg-gradient-to-r from-black to-blue-500 rounded-full md:w-40 md:h-40 -mt-20 -mb-20 overflow-hidden lg:h-96 lg:w-96'>
+      <Image src={deved} alt="deved" className="absolute cursor-pointer lg:right-20 lg:top-20 md:top-30 scale-150"/>
+    </div>
     
-          <section className='text-3xl font-bold text-center mb-10'>Projects
+          <section className='text-3xl font-bold text-center mt-5 mb-10 dark:text-white'>
             <div>
-              <h3 className='text-3xl font-bold py-4 text-center dark:text-white'></h3>
+              <h2 className='text-5xl font-bold py-0 text-center text-black dark:text-white'>Projects</h2>
             </div>
-            <div className='flex flex-col gap-10 py-0 lg:flex-row lg:flex-wrap'>
-              <div className='basic-1/3 flex-1'>
-                <Image src={web1} alt="Web 1" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} />
-              </div>
-              <div className='basic-1/3 flex-1'>
-                <Image src={web2} alt="Web 2" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 hover:scale-105" style="responsive" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')} />
-              </div>
-              
-            </div>
+          
+          
+            <div className="flex justify-center gap-4 mt-2 lg:mt-0 lg:-mb-4">
+
+<div className='basic-1/3 flex-1'>
+  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4">
+    <Image 
+      src={web1} 
+      alt="Web 1" 
+      className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-75 hover:scale-90" 
+      style="responsive" 
+      onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} 
+    />
+    <div className="absolute inset-0 flex justify-center items-center text-red-500 font-bold text-8xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+      D3-React Dashboard
+    </div>
+  </div>
+  <div className="flex justify-center -gap-8">
+    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/godfrey-d3reactdashboard-map-v2', '_blank')}><BsCode className="mr-2"/>Code</button>
+    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button>
+
+  </div>
+</div>
+
+<div className='basic-1/3 flex-1'>
+  <div className="relative cursor-pointer transition-transform duration-300 scale-y-95 hover:scale-90 mt-9 mb-5">
+    <Image src={web2} alt="Web 2" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-100 hover:scale-80" style="responsive" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')} />
+    <div className="absolute inset-0 flex justify-center items-center text-blue-500 font-bold text-8xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+      Netflix Clone App
+    </div>
+  </div>
+  <div className="flex justify-center -gap-8">
+    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/netflix-clone-deploy', '_blank')}><BsCode className="mr-2"/>Code</button>
+    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/emOcEkWO5aY', '_blank')}><BsPlay className="mr-1"/>Preview</button>
+  </div>
+</div>
+
+</div>
+
           </section>
 
-          <div>
-            <h3 className='text-3xl py-1 font-bold text-center dark:text-white'>Services Available</h3>
-            {/* <p className='text-md py-2 leading-8 text-gray-800'>[Add a <span className='text-teal-300'>paragraph</span> about your <span className='text-teal-300'>services</span> here if you want]</p> */}
+          <div className='py-6 -mb-14'>
+            <h3 className='text-5xl py-1 font-bold text-center dark:text-white'>Working Skills</h3>
           </div>
-          <div className='lg:flex justify-center gap-10 mb-20'>
+          <div className='lg:flex justify-center gap-5 mb-0'>
   <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
     <Image className='mx-auto' src={design} alt="design" width={100} height={100} />
     <h3 className='text-lg font-medium pt-8 pb-2'>Data Visualization</h3>
