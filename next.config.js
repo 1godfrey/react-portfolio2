@@ -5,6 +5,10 @@ const nextConfig = {
     module: {
       rules: [
         {
+          test: /\.txt$/i,
+          use: 'raw-loader',
+        },
+        {
           test: /\.mp4$/,
           use: {
             loader: 'file-loader',

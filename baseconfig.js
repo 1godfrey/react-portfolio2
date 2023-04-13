@@ -10,6 +10,10 @@ const mp4Loader = {
   module: {
     rules: [
       {
+        test: /\.txt$/i,
+        use: 'raw-loader',
+      },
+      {
         test: /\.mp4$/,
         use: [
           {

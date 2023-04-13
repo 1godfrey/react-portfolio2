@@ -1,0 +1,67 @@
+Godfrey Mwalupindi 
+
+Data/Software Engineer 
+
+Portfolio: https://react-portfolio2-coral.vercel.app/ 
+
+Columbus, Ohio | 513-746-1311 | mwalupindim@gmail.com 
+
+EDUCATION 
+
+B.S. from The Ohio State University, Main Campus			        
+
+ 
+
+SKILLS 
+
+Front End:		React, Javascript, Next.js, Tailwind CSS, Typescript, HTML, CSS 
+
+Back End: 		Java , SQL, Python, OAuth 
+
+Frameworks/Libs:	React, Angular, Spring Boot, Next.js, D3.js, Tableau, Knowledge with REST APIs 
+
+Database/Server:	MySQL , PostgreSQL , MongoDB, Erwin Data Modeler 
+
+Deployment:		Amazon S3/Web Services, Vercel 
+
+WORK EXPERIENCE 
+
+Software Engineer @ CORMAC (Remote) - (December 2022 - Present) 
+
+Data Science 
+
+Coded SVGs (Scalable Vector Graphics) to better visualize healthcare data through dashboards to clients using D3.js as well as other frontend libraries/frameworks 
+
+Builds data structures/algorithms to manipulate and sort large amounts of data 
+
+Web Development 
+
+Built web pages to host data visualizations for clients 
+
+Formatting web pages using HTML and implemented aesthetic color palettes using CSS	 
+
+Participates in code reviews and/or quality assurance testing activities 
+
+ 
+
+Junior Software Engineer @ QHSC (Remote) - (March 2022-December 2022) 
+
+Helped maintain website for a Non-profit Healthcare Organization that fields information from clients and stores that information in cloud databases 
+
+Used React, Javascript, HTML/CSS, MySQL 
+
+Stored organization metadata to database using SQL 
+
+PROJECTS 
+
+Netflix Clone - (Completed) 
+
+Built a Netflix Clone that takes username/email/password information, updates information to a database and authenticates credentials. Working video player as well as a “Favorites/My List” feature. 
+
+Used Next.js, Typescript, Tailwind.css, Prisma db, Mongo db, OAuth 
+
+D3 - React Dashboard - (Completed) 
+
+Built a React dashboard which rendered multiple data visualizations using D3.js. These visualizations range from a simple line chart, to a fully interactive map of the United States with hover functionality and React useState hooks under the hood to handle state management updates 
+
+Used D3.js, React, Javascript, HTML/CSS 

@@ -18,6 +18,8 @@ import web5 from "../public/web5.png"
 import web6 from "../public/web6.png"
 import web7 from "../public/web7.jpg"
 import { useState } from 'react'
+// import Resume_GodfreyMwalupindi from "../public/Resume_GodfreyMwalupindi.txt"
+// import Contact_GodfreyMwalupindi from "../public/Contact_GodfreyMwalupindi.txt"
 
 
 
@@ -52,8 +54,8 @@ export default function Home() {
       <h1 className='text-xl dark:text-white font-bold'>Portfolio</h1>
       <ul className='flex items-center'>
   <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl transition-transform duration-300 hover:scale-110'/></li>
-  <li><a className='bg-gradient-to-r from-black to-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/256fc13b15948be1d8355fc4fc4524b2/raw/442c6ed9b187e7c440a4ed63280f3cb871a19770/2023%2520resume%2520updated%2520(3).docx" target="_blank" rel="noopener noreferrer" alt="pic"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
-  <li><a className='bg-gradient-to-r from-black to-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank" rel="noopener noreferrer" alt="pic"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
+  <li><a className='bg-gradient-to-r from-black to-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/256fc13b15948be1d8355fc4fc4524b2/raw/442c6ed9b187e7c440a4ed63280f3cb871a19770/2023%2520resume%2520updated%2520(3).docx" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
+  <li><a className='bg-gradient-to-r from-black to-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
 </ul>
     </nav>
     <div className='text-center'>
