@@ -12,7 +12,7 @@ import code from '../public/code.png'
 import consulting from '../public/consulting.png'
 import web1 from "../public/web1.png"
 import web2 from "../public/web2.png"
-import web3 from "../public/web3.png"
+import web3 from "../public/web3.jpg"
 import web4 from "../public/web4.png"
 import web5 from "../public/web5.png"
 import web6 from "../public/web6.png"
@@ -68,7 +68,7 @@ export default function Home() {
        <AiOutlineGithub className='cursor-pointer transition-transform duration-300 hover:scale-125' onClick={() => window.open('https://github.com/1godfrey', '_blank')} />
     </div>
     <div className='relative scale-50 bottom-0 mx-auto bg-gradient-to-r from-black to-blue-500 rounded-full md:w-40 md:h-40 -mt-20 -mb-20 overflow-hidden lg:h-96 lg:w-96'>
-      <Image src={deved} alt="deved" className="absolute cursor-pointer lg:right-20 lg:top-20 md:top-30 scale-150"/>
+      <Image src={deved} alt="deved" className="absolute cursor-pointer lg:right-20 lg:top-40 md:top-30 scale-150"/>
     </div>
     
           <section className='text-3xl font-bold text-center mt-5 mb-10 dark:text-white'>
@@ -76,10 +76,12 @@ export default function Home() {
               <h2 className='text-5xl font-bold py-0 text-center text-black dark:text-white'>Projects</h2>
             </div>
           
-          
-            <div className="flex justify-center gap-4 mt-2 lg:mt-0 lg:-mb-4">
+          {/* ALL PROJECTS WRAPPER */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-2 lg:mt-0 lg:-mb-4">
 
-<div className='basic-1/3 flex-1'>
+                    {/* PROJECT 1 */}
+
+<div className='basic-1/3 flex-1 col-span-2 lg:col-span-2'>
   <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4">
     <Image 
       src={web1} 
@@ -88,7 +90,7 @@ export default function Home() {
       style="responsive" 
       onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} 
     />
-    <div className="absolute inset-0 flex justify-center items-center text-red-500 font-bold text-8xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+    <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
       D3-React Dashboard
     </div>
   </div>
@@ -100,10 +102,12 @@ export default function Home() {
   </div>
 </div>
 
-<div className='basic-1/3 flex-1'>
+                    {/* PROJECT 2 */}
+
+<div className='basic-1/3 flex-1 col-span-2 lg:col-span-2'>
   <div className="relative cursor-pointer transition-transform duration-300 scale-y-95 hover:scale-90 mt-9 mb-5">
     <Image src={web2} alt="Web 2" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-100 hover:scale-80" style="responsive" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')} />
-    <div className="absolute inset-0 flex justify-center items-center text-blue-500 font-bold text-8xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+    <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
       Netflix Clone App
     </div>
   </div>
@@ -111,6 +115,29 @@ export default function Home() {
     <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://netflix-clone-deploy-cw4ehd6ju-1godfrey.vercel.app/auth', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
     <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/netflix-clone-deploy', '_blank')}><BsCode className="mr-2"/>Code</button>
     <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/emOcEkWO5aY', '_blank')}><BsPlay className="mr-1"/>Preview</button>
+  </div>
+</div>
+
+                      {/* PROJECT 3 */}
+
+<div className='basic-1/3 flex-1 col-span-2 lg:col-span-2'>
+  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4">
+    <Image 
+      src={web3} 
+      alt="Web 3" 
+      className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-200 hover:scale-90" 
+      style="responsive" 
+      onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} 
+    />
+    <div className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+      E-commerce Website
+    </div>
+  </div>
+  <div className="flex justify-center -gap-8 mt-10">
+    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://store-ten-chi.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/store', '_blank')}><BsCode className="mr-2"/>Code</button>
+    {/* <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button> */}
+
   </div>
 </div>
 
