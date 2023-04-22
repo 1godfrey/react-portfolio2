@@ -130,16 +130,16 @@ export default function Home() {
                     {/* PROJECT 2 */}
 
 <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2'>
-  <div className="relative cursor-pointer transition-transform duration-300 scale-y-125 hover:scale-90 mt-10 mb-5">
+  <div className="relative cursor-pointer top-4 transition-transform duration-300 scale-y-125 hover:scale-90 mt-10 mb-5">
     <Image src={web2} alt="Web 2" className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-100 hover:scale-80" style="responsive"  />
     <div onClick={() => window.open('https://lava-tau.vercel.app/auth', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
       Video Streaming App
     </div>
   </div>
   <div className="flex justify-center -gap-2">
-    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://lava-tau.vercel.app/auth', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
-    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/lava', '_blank')}><BsCode className="mr-2"/>Code</button>
-    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://www.youtube.com/watch?v=wkHKId22jDU', '_blank')}><BsPlay className="mr-1"/>Preview</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-8 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://lava-tau.vercel.app/auth', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-8 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/lava', '_blank')}><BsCode className="mr-2"/>Code</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-8 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://www.youtube.com/watch?v=wkHKId22jDU', '_blank')}><BsPlay className="mr-1"/>Preview</button>
   </div>
 </div>
 
