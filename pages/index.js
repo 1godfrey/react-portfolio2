@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs'
-import {AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube, AiOutlineGithub} from 'react-icons/ai'
+import {AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube, AiOutlineGithub, AiOutlineArrowDown} from 'react-icons/ai'
 import { BsCode, BsPlay } from 'react-icons/bs'
 import { HiOutlineDocumentText } from 'react-icons/hi'
 import { RiContactsBook2Line } from 'react-icons/ri'
@@ -10,14 +10,14 @@ import deved from '../public/dev-ed-wave.png'
 import design from '../public/design.png'
 import code from '../public/code.png'
 import consulting from '../public/consulting.png'
-import web1 from "../public/web1.png"
+import web1 from "../public/web1.jpg"
 import web2 from "../public/lavapreview2.jpg"
 import web3 from "../public/web3.jpg"
 import web4 from "../public/guccipreview.jpg"
 import web5 from "../public/web5.png"
 import web6 from "../public/web6.png"
 import web7 from "../public/web7.jpg"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 // import Resume_GodfreyMwalupindi from "../public/Resume_GodfreyMwalupindi.txt"
 // import Contact_GodfreyMwalupindi from "../public/Contact_GodfreyMwalupindi.txt"
 
@@ -27,6 +27,7 @@ import { useState } from 'react'
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
   const [showImage, setShowImage] = useState(false);
+  const [showIcon, setShowIcon] = useState(true);
 
     const handleMoreInfoClick = () => {
     setShowImage(true);
@@ -35,6 +36,25 @@ export default function Home() {
   const handleModalClose = () => {
     setShowImage(false);
   };
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        setShowIcon(false);
+      } else {
+        setShowIcon(true);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+  
   
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -47,15 +67,15 @@ export default function Home() {
 
       <main className='px-10 md:px-20 lg:px-40 dark:bg-gray-900'>
   <div className="fixed top-0 left-0 h-screen w-screen z-[-1]">
-    <Image src={web7} className="h-full w-full object-cover opacity-10"/>
+    <Image src={web7} className="h-full w-full object-cover opacity-20 "/>
   </div>
   <section className='min-h-screen relative'>
     <nav className='py-10 mb-12 flex justify-between'>
-      <h1 className='text-xl dark:text-white font-bold'>Portfolio</h1>
+      <h1 className='text-xl dark:text-white font-bold'></h1>
       <ul className='flex items-center'>
   <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl transition-transform duration-300 hover:scale-110'/></li>
-  <li><a className='bg-gradient-to-r from-black to-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/256fc13b15948be1d8355fc4fc4524b2/raw/ff343ad8d84bf86bfb12799a6b34acf4c8150a5e/2023%2520resume%2520updated%2520(3).docx" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
-  <li><a className='bg-gradient-to-r from-black to-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
+  <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/256fc13b15948be1d8355fc4fc4524b2/raw/ff343ad8d84bf86bfb12799a6b34acf4c8150a5e/2023%2520resume%2520updated%2520(3).docx" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
+  <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
 </ul>
     </nav>
     <div className='text-center'>
@@ -67,10 +87,15 @@ export default function Home() {
        <AiFillLinkedin className='cursor-pointer transition-transform duration-300 hover:scale-125' onClick={() => window.open('https://www.linkedin.com/in/godfrey-mwalupindi-9b2165244/', '_blank')} />
        <AiOutlineGithub className='cursor-pointer transition-transform duration-300 hover:scale-125' onClick={() => window.open('https://github.com/1godfrey', '_blank')} />
     </div>
-    <div className='relative scale-50 bottom-0 mx-auto bg-gradient-to-r from-black to-blue-500 rounded-full md:w-40 md:h-40 -mt-20 -mb-20 overflow-hidden lg:h-96 lg:w-96'>
-      <Image src={deved} alt="deved" className="absolute cursor-pointer lg:right-20 lg:top-40 md:top-30 scale-150"/>
+    <div className={`mt-48 animate-bounce dark:text-white ${showIcon ? 'visible' : 'hidden'}`}>
+      {showIcon && <AiOutlineArrowDown size={30} />}
+
     </div>
-    
+
+    {/* <div className='relative scale-50 bottom-0 mx-auto bg-gradient-to-r from-black to-blue-500 rounded-full md:w-40 md:h-40 -mt-20 -mb-20 overflow-hidden lg:h-96 lg:w-96'>
+      <Image src={deved} alt="deved" className="absolute cursor-pointer lg:right-20 lg:top-40 md:top-30 scale-150"/>
+    </div> */}
+    <div className='mt-48'></div>
           <section className='text-3xl font-bold text-center mt-5 mb-10 dark:text-white'>
             <div>
               <h2 className='text-5xl font-bold py-0 text-center text-black dark:text-white'>Projects</h2>
@@ -95,9 +120,9 @@ export default function Home() {
     </div>
   </div>
   <div className="flex justify-center -gap-8">
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/godfrey-d3reactdashboard-map-v2', '_blank')}><BsCode className="mr-2"/>Code</button>
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/godfrey-d3reactdashboard-map-v2', '_blank')}><BsCode className="mr-2"/>Code</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button>
 
   </div>
 </div>
@@ -111,10 +136,10 @@ export default function Home() {
       Video Streaming App
     </div>
   </div>
-  <div className="flex justify-center -gap-8">
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-20 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://lava-tau.vercel.app/auth', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-20 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/lava', '_blank')}><BsCode className="mr-2"/>Code</button>
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-20 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/emOcEkWO5aY', '_blank')}><BsPlay className="mr-1"/>Preview</button>
+  <div className="flex justify-center -gap-2">
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-12 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://lava-tau.vercel.app/auth', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-12 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/lava', '_blank')}><BsCode className="mr-2"/>Code</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 mt-12 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://www.youtube.com/watch?v=wkHKId22jDU', '_blank')}><BsPlay className="mr-1"/>Preview</button>
   </div>
 </div>
 
@@ -134,8 +159,8 @@ export default function Home() {
     </div>
   </div>
   <div className="flex justify-center -gap-8 mt-10">
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://store-ten-chi.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/store', '_blank')}><BsCode className="mr-2"/>Code</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://store-ten-chi.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/store', '_blank')}><BsCode className="mr-2"/>Code</button>
     {/* <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button> */}
 
   </div>
@@ -156,8 +181,8 @@ export default function Home() {
     </div>
   </div>
   <div className="flex justify-center -gap-8 mt-10">
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://gucci-gold.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
-    <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/gucci', '_blank')}><BsCode className="mr-2"/>Code</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://gucci-gold.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://github.com/1godfrey/gucci', '_blank')}><BsCode className="mr-2"/>Code</button>
     {/* <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-90 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button> */}
 
   </div>
