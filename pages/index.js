@@ -18,6 +18,7 @@ import web5 from "../public/web5.png"
 import web6 from "../public/web6.png"
 import web7 from "../public/web7.jpg"
 import web8 from "../public/web8.jpg"
+import web9 from "../public/web9.jpg"
 import { useState, useEffect } from 'react'
 // import Resume_GodfreyMwalupindi from "../public/Resume_GodfreyMwalupindi.txt"
 // import Contact_GodfreyMwalupindi from "../public/Contact_GodfreyMwalupindi.txt"
@@ -75,7 +76,7 @@ export default function Home() {
       <h1 className='text-xl dark:text-white font-bold'></h1>
       <ul className='flex items-center'>
   <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl transition-transform duration-300 hover:scale-110'/></li>
-  <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="./Resume.jpg" download="Resume.jpg" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
+  <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="./Resume2023.jpg" download="Resume2023.jpg" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
   <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
 </ul>
     </nav>
@@ -176,6 +177,30 @@ export default function Home() {
 
                       {/* PROJECT 4 */}
 
+                      <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
+  <div className="relative cursor-pointer transition-transform duration-300 -mb-4 hover:scale-90">
+    <Image 
+      src={web9} 
+      alt="Web 9" 
+      className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-200 hover:scale-90" 
+      style="responsive" 
+       
+    />
+    <div onClick={() => window.open('https://store-ten-chi.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+      Real-Time Chat Room
+    </div>
+  </div>
+  <div className="flex justify-center -gap-8 mt-10">
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://lava-chat-app.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://github.com/1godfrey/Lava_ChatApp', '_blank')}><BsCode className="mr-2"/>Code</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://www.youtube.com/watch?v=GlHKoyR_YJ0', '_blank')}><BsPlay className="mr-1"/>Preview</button>
+
+  </div>
+</div>
+
+
+                      {/* PROJECT 5 */}
+
 <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
   <div className="relative cursor-pointer transition-transform duration-300 -mb-4 hover:scale-90">
     <Image 
@@ -197,7 +222,7 @@ export default function Home() {
   </div>
 </div>
 
-                        {/* PROJECT 5 */}
+                        {/* PROJECT 6 */}
       <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2'>
   <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4">
     <Image 
