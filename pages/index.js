@@ -5,10 +5,12 @@ import { BsCode, BsPlay } from 'react-icons/bs'
 import { HiOutlineDocumentText } from 'react-icons/hi'
 import { RiContactsBook2Line } from 'react-icons/ri'
 import { SiApplearcade } from 'react-icons/si'
+import { IoNotificationsSharp } from 'react-icons/io5'
 import Image from 'next/image'
 import deved from '../public/dev-ed-wave.png'
 import design from '../public/design.png'
 import code from '../public/code.png'
+import machinelearning from '../public/machinelearning.png'
 import consulting from '../public/consulting.png'
 import web1 from "./web1.jpg"
 import web2 from "../public/lavapreview2.jpg"
@@ -27,7 +29,7 @@ import { useState, useEffect } from 'react'
 /* eslint-disable react/jsx-no-target-blank */
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const [showImage, setShowImage] = useState(false);
   const [showIcon, setShowIcon] = useState(true);
 
@@ -75,7 +77,7 @@ export default function Home() {
     <nav className='py-10 mb-12 flex justify-between'>
       <h1 className='text-xl dark:text-white font-bold'></h1>
       <ul className='flex items-center'>
-  <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl transition-transform duration-300 hover:scale-110'/></li>
+  {/* <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl transition-transform duration-300 hover:scale-110'/></li> */}
   <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="./Resume2023.jpg" download="Resume2023.jpg" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
   <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
 </ul>
@@ -98,9 +100,13 @@ export default function Home() {
     {/* <div className='relative scale-75 bottom-0 mx-auto bg-gradient-to-r from-black to-blue-500 rounded-full md:w-40 md:h-40 -mt-20 -mb-20 overflow-hidden lg:h-96 lg:w-96'>
       <Image src={deved} alt="deved" className="absolute cursor-pointer lg:right-20 lg:top-40 md:top-30 scale-150"/>
     </div> */}
-    <div className='mt-48'></div>
-          <section className='text-3xl font-bold text-center mt-5 mb-10 dark:text-white'>
+    <div className='mt-48 dark:mt-48'></div>
+          <section className='text-3xl font-bold text-center mt-96 mb-10 dark:text-white'>
             <div>
+              <div className='-mb-20 flex flex-row items-center gap-1'>
+              <IoNotificationsSharp className='animate-bounce transition duration-1000' size={15}/>
+              <span className='font-light text-sm'>Hover Projects for Technologies Used</span>
+              </div>
               <h2 className='text-5xl font-bold py-10 text-center text-black dark:text-white'>Projects</h2>
             </div>
           
@@ -110,18 +116,20 @@ export default function Home() {
                     {/* PROJECT 1 */}
 
                     <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
-  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4">
-    <Image 
-      src={web1} 
-      alt="Web 1" 
-      className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-200 hover:scale-90" 
-      style="responsive" 
-       
-    />
-    <div onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
-      D3/React Dashboard
-    </div>
+                    <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" 
+                      title="Technologies Used: React, D3.JS, Javascript, HTML, CSS" >
+  <Image 
+    src={web1} 
+    alt="Web 1" 
+    className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-200 hover:scale-90" 
+    style="responsive" 
+   
+  />
+  <div onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+    D3/React Dashboard
   </div>
+</div>
+
   <div className="flex justify-center mt-10 -gap-2">
     <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-2 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
     <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-2 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://github.com/1godfrey/godfrey-d3reactdashboard-map-v2', '_blank')}><BsCode className="mr-2"/>Code</button>
@@ -133,7 +141,8 @@ export default function Home() {
                     {/* PROJECT 2 */}
 
                     <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
-  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4">
+  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" 
+    title="Technologies Used: React, Next.js, Typescript, Mongo.DB, Tailwind, Prisma.DB">
     <Image 
       src={web2} 
       alt="Web 2" 
@@ -155,7 +164,7 @@ export default function Home() {
                       {/* PROJECT 3 */}
 
                       <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
-  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4">
+  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" title="Technologies Used: React, Next.js, Typescript, Tailwind, Mongo.DB, Prisma.DB">
     <Image 
       src={web8} 
       alt="Web 8" 
@@ -178,7 +187,7 @@ export default function Home() {
                       {/* PROJECT 4 */}
 
                       <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
-  <div className="relative cursor-pointer transition-transform duration-300 -mb-4 hover:scale-90">
+  <div className="relative cursor-pointer transition-transform duration-300 -mb-4 hover:scale-90" title="Technologies Used: Python, SocketsIO, Flask, Django, Javascript, HTML, CSS">
     <Image 
       src={web9} 
       alt="Web 9" 
@@ -202,7 +211,7 @@ export default function Home() {
                       {/* PROJECT 5 */}
 
 <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
-  <div className="relative cursor-pointer transition-transform duration-300 -mb-4 hover:scale-90">
+  <div className="relative cursor-pointer transition-transform duration-300 -mb-4 hover:scale-90" title="Technologies Used: Next.js, Javascript, HTML, CSS">
     <Image 
       src={web3} 
       alt="Web 3" 
@@ -224,7 +233,7 @@ export default function Home() {
 
                         {/* PROJECT 6 */}
       <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2'>
-  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4">
+  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" title="Technologies Used: Next.js, Javascript, HTML, CSS">
     <Image 
       src={web4} 
       alt="Web 4" 
@@ -273,10 +282,23 @@ export default function Home() {
 
     </p>
     <h4 className='py-4 font-bold text-teal-600'>Main Technologies</h4>
-    <p className='text-gray-800 py-1'>Next.js</p>
-    <p className='text-gray-800 py-1'>Tailwind.css</p>
     <p className='text-gray-800 py-1'>React</p>
+    <p className='text-gray-800 py-1'>Tailwind.css</p>
+    <p className='text-gray-800 py-1'>Next.js</p>
     <p className='text-gray-800 py-1'>Javascript</p>
+  </div>
+
+  <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
+    <Image className='mx-auto' src={machinelearning} alt="machinelearning" width={100} height={100} />
+    <h3 className='text-lg font-medium pt-8 pb-2'>Machine Learning</h3>
+    <p className='py-2'>
+    Proficient in creating and implementing advanced algorithms to utilize AI to analyze/extract relevant information from unique company documents in the Cloud.
+    </p>
+    <h4 className='py-4 font-bold text-teal-600'>Main Technologies</h4>
+    <p className='text-gray-800 py-1'>Python</p>
+    <p className='text-gray-800 py-1'>Google Cloud Platform</p>
+    <p className='text-gray-800 py-1'>Pytorch</p>
+    <p className='text-gray-800 py-1'>NumbPy</p>
   </div>
 
           </div>
