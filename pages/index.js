@@ -22,6 +22,8 @@ import web7 from "../public/web7.jpg"
 import web8 from "../public/web8.jpg"
 import web9 from "../public/web9.jpg"
 import web10 from "../public/web10.png"
+import web11 from "../public/web11.png"
+import web12 from "../public/web12.png"
 import { useState, useEffect } from 'react'
 // import Resume_GodfreyMwalupindi from "../public/Resume_GodfreyMwalupindi.txt"
 // import Contact_GodfreyMwalupindi from "../public/Contact_GodfreyMwalupindi.txt"
@@ -79,8 +81,8 @@ export default function Home() {
       <h1 className='text-xl dark:text-white font-bold'></h1>
       <ul className='flex items-center'>
   {/* <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl transition-transform duration-300 hover:scale-110'/></li> */}
-  <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="./Resume2023.jpg" download="Resume2023.jpg" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
-  <li><a className='bg-blue-500 text-white px-1 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
+  <li><a className='bg-white text-blue-500 font-bold px-2 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://docs.google.com/document/d/1_0JeUy-i_pOtY9hxIzb2hVlNx2RsMyparTyQugGPzCU/edit?usp=sharing" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
+  <li><a className='bg-white text-blue-500 font-bold px-2 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
 </ul>
     </nav>
     <div className='text-center'>
@@ -160,24 +162,27 @@ export default function Home() {
   </div>
 </div>
 
+
+
+
                       {/* PROJECT 3 */}
 
                       <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
   <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" title="Technologies Used: React, Next.js, Typescript, Tailwind, Mongo.DB, Prisma.DB">
     <Image 
-      src={web8} 
-      alt="Web 8" 
+      src={web12} 
+      alt="Web 12" 
       className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-200 hover:scale-90" 
       style="responsive" 
        
     />
-    <div onClick={() => window.open('https://store-ten-chi.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
-      Airbnb Clone
+    <div onClick={() => window.open('https://github.com/1godfrey/CancerSegmentation', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+      Cancer Segmentation API using AI
     </div>
   </div>
   <div className="flex justify-center -gap-8 mt-10">
-    <button className="bg-blue-500 hover:bg-red-500 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://store-ten-chi.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo Soon</button>
-    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://github.com/1godfrey/airbnbclone', '_blank')}><BsCode className="mr-2"/>Code</button>
+    {/* <button className="bg-blue-500 hover:bg-red-500 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://github.com/1godfrey/airbnbclone', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo Soon</button> */}
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://github.com/1godfrey/CancerSegmentation', '_blank')}><BsCode className="mr-2"/>Code</button>
     {/* <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button> */}
 
   </div>
@@ -216,7 +221,7 @@ export default function Home() {
       style="responsive" 
        
     />
-    <div onClick={() => window.open('https://store-ten-chi.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+    <div onClick={() => window.open('https://lava-chat-app.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
       Real-Time Chat Room
     </div>
   </div>
@@ -228,9 +233,32 @@ export default function Home() {
   </div>
 </div>
 
+                      {/* PROJECT 3 */}
+
+                      <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
+  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" title="Technologies Used: React, Next.js, Typescript, Tailwind, Mongo.DB, Prisma.DB">
+    <Image 
+      src={web8} 
+      alt="Web 8" 
+      className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-200 hover:scale-90" 
+      style="responsive" 
+       
+    />
+    <div onClick={() => window.open('https://store-ten-chi.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+      Airbnb Clone
+    </div>
+  </div>
+  <div className="flex justify-center -gap-8 mt-10">
+    <button className="bg-blue-500 hover:bg-red-500 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://github.com/1godfrey/airbnbclone', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo Soon</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://github.com/1godfrey/airbnbclone', '_blank')}><BsCode className="mr-2"/>Code</button>
+    {/* <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button> */}
+
+  </div>
+</div>
 
 
-                      {/* PROJECT 6 */}
+
+                      {/* PROJECT 7 */}
                       <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2 scale-y-115'>
                     <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" 
                       title="Technologies Used: React, D3.JS, Javascript, HTML, CSS" >
@@ -241,7 +269,7 @@ export default function Home() {
     style="responsive" 
    
   />
-  <div onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+  <div onClick={() => window.open('https://dashboard-hazel-two.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100" >
     D3/React Dashboard
   </div>
 </div>
@@ -256,7 +284,7 @@ export default function Home() {
 
 
 
-                        {/* PROJECT 7 */}
+                        {/* PROJECT 8 */}
       <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2'>
   <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" title="Technologies Used: Next.js, Javascript, HTML, CSS, API for clothes">
     <Image 
@@ -276,7 +304,29 @@ export default function Home() {
     {/* <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button> */}
 
   </div>
-</div>                        
+</div>     
+
+                        {/* PROJECT 9 */}
+                        <div className='basic-1/3 flex-1 col-span-2 lg:col-span-2'>
+  <div className="relative cursor-pointer transition-transform duration-300 hover:scale-90 -mb-4" title="Technologies Used: React, Javascript, Tailwind, HTML/CSS">
+    <Image 
+      src={web11} 
+      alt="Web 11" 
+      className="cursor-pointer rounded-lg object-cover h-full w-full transition-transform duration-300 scale-y-200 hover:scale-90" 
+      style="responsive" 
+      
+    />
+    <div onClick={() => window.open('https://countdown-timer-two-zeta.vercel.app/', '_blank')} className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-70 text-blue-500 font-bold text-5xl opacity-0 transition-opacity duration-300 hover:opacity-100">
+      To-Do App
+    </div>
+  </div>
+  <div className="flex justify-center -gap-8 mt-10">
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://countdown-timer-two-zeta.vercel.app/', '_blank')}><SiApplearcade size={26} className="mr-3"/>Demo</button>
+    <button className="bg-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://github.com/1godfrey/Countdown-Timer', '_blank')}><BsCode className="mr-2"/>Code</button>
+    {/* <button className="bg-gradient-to-r from-black to-blue-500 hover:bg-blue-700 scale-75 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 flex items-center" onClick={() => window.open('https://youtu.be/OPMurHovNX4', '_blank')}><BsPlay className="mr-1"/>Preview</button> */}
+
+  </div>
+</div> 
 
 </div>
 
