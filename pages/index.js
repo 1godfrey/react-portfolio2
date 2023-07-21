@@ -81,7 +81,7 @@ export default function Home() {
       <h1 className='text-xl dark:text-white font-bold'></h1>
       <ul className='flex items-center'>
   {/* <li><BsFillMoonStarsFill onClick={() => {setDarkMode(!darkMode)}} className='cursor-pointer text-2xl transition-transform duration-300 hover:scale-110'/></li> */}
-  <li><a className='bg-blue-500 text-white font-bold px-2 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://docs.google.com/document/d/1_0JeUy-i_pOtY9hxIzb2hVlNx2RsMyparTyQugGPzCU/edit?usp=sharing" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li>
+  {/* <li><a className='bg-blue-500 text-white font-bold px-2 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://docs.google.com/document/d/1_0JeUy-i_pOtY9hxIzb2hVlNx2RsMyparTyQugGPzCU/edit?usp=sharing" target="_blank"><HiOutlineDocumentText size={22} className="mr-1"/>Resume</a></li> */}
   <li><a className='bg-blue-500 text-white  font-bold px-2 py-2 rounded-md ml-5 flex items-center transition-transform duration-300 hover:scale-110' href="https://gist.githubusercontent.com/1godfrey/13af4f82a9aad5ee84a12cad98852af3/raw/5a85bc8ca7e804dc2e4092c893ccb062e0cf7a76/contactinfo.docx" target="_blank"><RiContactsBook2Line size={22} className="mr-1"/>Contact</a></li>
 </ul>
     </nav>
