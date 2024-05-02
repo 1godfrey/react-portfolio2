@@ -47,7 +47,7 @@ export default function Home() {
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY > 0) {
-        setShowIcon(false);
+        setShowIcon(true);
       } else {
         setShowIcon(true);
       }
@@ -92,25 +92,77 @@ export default function Home() {
       {/* <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto'>[Add a paragraph about yourself here if you want]</p> */}
     </div>
     <div className='text-5xl flex justify-center gap-10 py-3 text-gray-600'>
-       <AiFillLinkedin className='cursor-pointer transition-transform duration-300 hover:scale-125' onClick={() => window.open('https://www.linkedin.com/in/godfrey-mwalupindi-9b2165244/', '_blank')} />
+       <AiFillLinkedin className='cursor-pointer transition-transform duration-300 hover:scale-125' onClick={() => window.open('https://www.linkedin.com/in/godfrey-m-9b2165244/', '_blank')} />
        <AiOutlineGithub className='cursor-pointer transition-transform duration-300 hover:scale-125' onClick={() => window.open('https://github.com/1godfrey', '_blank')} />
     </div>
-    <div className={`mt-48 animate-bounce dark:text-white ${showIcon ? 'visible' : 'hidden'}`}>
+    <div className={`mt-24 -mb-48 flex justify-center animate-bounce dark:text-white ${showIcon ? 'visible' : 'hidden'}`}>
+
       {showIcon && <AiOutlineArrowDown size={30} />}
 
     </div>
 
+    <div className='py-6 -mb-14 mt-72'>
+            <h3 className='text-5xl py-4 font-bold text-center dark:text-white'>Working Skills</h3>
+          </div>
+          <div className='lg:flex justify-center gap-5 mb-0'>
+
+
+  <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
+    <Image className='mx-auto' src={code} alt="code" width={100} height={100} />
+    <h3 className='text-lg font-medium pt-8 pb-2'>Web Development</h3>
+    <p className='py-2'>
+    Proficient in creating modern, attractive web applications using popular front end frameworks. This can range from simple calculator apps to fully fleshed out UI interfaces. 
+
+    </p>
+    <h4 className='py-4 font-bold text-teal-600'>Main Technologies</h4>
+    <p className='text-gray-800 py-1'>React</p>
+    <p className='text-gray-800 py-1'>Tailwind.css</p>
+    <p className='text-gray-800 py-1'>Next.js</p>
+    <p className='text-gray-800 py-1'>Javascript</p>
+  </div>
+
+  <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
+    <Image className='mx-auto' src={machinelearning} alt="machinelearning" width={100} height={100} />
+    <h3 className='text-lg font-medium pt-8 pb-2'>Backend / Data Platform</h3>
+    <p className='py-2'>
+    Leverage Snowflake, AWS services, Job scheduling, and Terraform IAC to help support a data platform used by fellow colleagues.
+    </p>
+    <h4 className='py-4 font-bold text-teal-600'>Main Technologies</h4>
+    <p className='text-gray-800 py-1'>Python</p>
+    <p className='text-gray-800 py-1'>Snowflake</p>
+    <p className='text-gray-800 py-1'>AWS Services (S3, Lambda, many more)</p>
+    <p className='text-gray-800 py-1'>Terraform</p>
+    <p className='text-gray-800 py-1'>SQL</p>
+  </div>
+
+
+
+  <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
+    <Image className='mx-auto' src={design} alt="design" width={100} height={100} />
+    <h3 className='text-lg font-medium pt-8 pb-2'>Data Visualization</h3>
+    <p className='py-2 text-s'>
+      Proficient in creating interactive data visualizations/dashboards that can be used for downstream reporting. This can range from standard bar charts to fully interactive geographical maps.
+    </p>
+    <h4 className='py-4 font-bold text-teal-600'>Main Technologies</h4>
+    <p className='text-gray-800 py-1'>D3.js</p>
+    <p className='text-gray-800 py-1'>React</p>
+    <p className='text-gray-800 py-1'>HTML/CSS</p>
+    <p className='text-gray-800 py-1'>Javascript</p>
+  </div>
+
+          </div>
+
     {/* <div className='relative scale-75 bottom-0 mx-auto bg-gradient-to-r from-black to-blue-500 rounded-full md:w-40 md:h-40 -mt-20 -mb-20 overflow-hidden lg:h-96 lg:w-96'>
       <Image src={deved} alt="deved" className="absolute cursor-pointer lg:right-20 lg:top-40 md:top-30 scale-150"/>
     </div> */}
-    <div className='mt-48 dark:mt-48'></div>
+    <div className='-mt-24 dark:-mt-56'></div>
           <section className='text-3xl font-bold text-center mt-96 mb-10 dark:text-white'>
             <div>
               <div className='-mb-20 flex flex-row items-center gap-1'>
               <IoNotificationsSharp className='animate-bounce transition duration-1000' size={15}/>
               <span className='font-light text-sm'>Hover Projects for Technologies Used</span>
               </div>
-              <h2 className='text-5xl font-bold py-10 text-center text-black dark:text-white'>Projects</h2>
+              <h2 className='text-5xl font-bold py-10 text-center text-black dark:text-white'>Side Projects</h2>
             </div>
           
           {/* ALL PROJECTS WRAPPER */}
@@ -332,51 +384,7 @@ export default function Home() {
 
           </section>
 
-          <div className='py-6 -mb-14'>
-            <h3 className='text-5xl py-1 font-bold text-center dark:text-white'>Working Skills</h3>
-          </div>
-          <div className='lg:flex justify-center gap-5 mb-0'>
-  <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-    <Image className='mx-auto' src={design} alt="design" width={100} height={100} />
-    <h3 className='text-lg font-medium pt-8 pb-2'>Data Visualization</h3>
-    <p className='py-2 text-s'>
-      Interactive data visualizations/dashboards using D3.js and React. This can range from standard bar charts to fully interactive Geographical Maps.
-    </p>
-    <h4 className='py-4 font-bold text-teal-600'>Main Technologies</h4>
-    <p className='text-gray-800 py-1'>D3.js</p>
-    <p className='text-gray-800 py-1'>React</p>
-    <p className='text-gray-800 py-1'>HTML/CSS</p>
-    <p className='text-gray-800 py-1'>Javascript</p>
-  </div>
 
-  <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-    <Image className='mx-auto' src={code} alt="code" width={100} height={100} />
-    <h3 className='text-lg font-medium pt-8 pb-2'>Web Development</h3>
-    <p className='py-2'>
-    Proficient in creating modern, attractive web applications using Next.js and Tailwind.css. This can range from simple calculator apps to fully fleshed out UI interfaces. 
-
-    </p>
-    <h4 className='py-4 font-bold text-teal-600'>Main Technologies</h4>
-    <p className='text-gray-800 py-1'>React</p>
-    <p className='text-gray-800 py-1'>Tailwind.css</p>
-    <p className='text-gray-800 py-1'>Next.js</p>
-    <p className='text-gray-800 py-1'>Javascript</p>
-  </div>
-
-  <div className='text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white'>
-    <Image className='mx-auto' src={machinelearning} alt="machinelearning" width={100} height={100} />
-    <h3 className='text-lg font-medium pt-8 pb-2'>Machine Learning</h3>
-    <p className='py-2'>
-    Proficient in creating and implementing advanced algorithms to utilize AI to analyze/extract relevant information from unique company documents in the Cloud.
-    </p>
-    <h4 className='py-4 font-bold text-teal-600'>Main Technologies</h4>
-    <p className='text-gray-800 py-1'>Python</p>
-    <p className='text-gray-800 py-1'>Google Cloud Platform</p>
-    <p className='text-gray-800 py-1'>Pytorch</p>
-    <p className='text-gray-800 py-1'>NumbPy</p>
-  </div>
-
-          </div>
           </section>
 
       </main>

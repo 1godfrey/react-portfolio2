@@ -104,6 +104,10 @@
   transform: translateZ(0);
 }
 
+.fixed {
+  position: fixed;
+}
+
 .logo,
 .thirteen {
   position: relative;
